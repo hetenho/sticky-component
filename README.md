@@ -1,5 +1,7 @@
 # sticky-component
 
+This is a complete and shameless copy of the react-sticky library which is no longer maintained. Examples and tests are removed for now and the only code change made is to fix the deprecation warning for `componentWillMount` lifecycle hook.
+
 Make your React components sticky!
 
 
