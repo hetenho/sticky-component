@@ -1,25 +1,10 @@
-# react-sticky [![Build Status](https://travis-ci.org/captivationsoftware/react-sticky.svg?branch=master)](https://travis-ci.org/captivationsoftware/react-sticky)
+# sticky-component
 
 Make your React components sticky!
 
-#### Update No longer actively maintained:	
-
-The 6.0.3 release is the last release maintained. This means we will not be considering any PR's and/or responding to any issues until a new maintainer is identified. It is *highly* recommended that you begin transitioning to another sticky library to ensure better support and sustainability. This is obviously less than ideal - sorry for any inconvenience!
-
-#### Demos
-
-* [Basic](http://react-sticky.netlify.com/#/basic)
-* [Relative](http://react-sticky.netlify.com/#/relative)
-* [Stacked](http://react-sticky.netlify.com/#/stacked)
-
-#### Version 6.x Highlights
-
-* Completely redesigned to support sticky behavior via higher-order component, giving you ultimate control of implementation details
-* Features a minimal yet efficient API
-* Drops support for versions of React < 15.3. If you are using an earlier version of React, continue to use the 5.x series
 
 #### CSS
-There's a CSS alternative to `react-sticky`: the `position: sticky` feature. However it currently does not have [full browser support](https://caniuse.com/#feat=css-sticky), specifically a lack of IE11 support and some bugs with table elements. Before using `react-sticky`, check to see if the browser support and restrictions prevent you from using `position: sticky`, as CSS will always be faster and more durable than a JS implementation.
+There's a CSS alternative to `sticky-component`: the `position: sticky` feature. However it currently does not have [full browser support](https://caniuse.com/#feat=css-sticky), specifically a lack of IE11 support and some bugs with table elements. Before using `sticky-component`, check to see if the browser support and restrictions prevent you from using `position: sticky`, as CSS will always be faster and more durable than a JS implementation.
 ```css
 position: -webkit-sticky;
 position: sticky;
@@ -29,14 +14,14 @@ top: 0;
 ## Installation
 
 ```sh
-npm install react-sticky
+npm install sticky-component
 ```
 
 ## Overview & Basic Example
 
-The goal of `react-sticky` is make it easier for developers to build UIs that have sticky elements. Some examples include a sticky navbar, or a two-column layout where the left side sticks while the right side scrolls.
+The goal of `sticky-component` is make it easier for developers to build UIs that have sticky elements. Some examples include a sticky navbar, or a two-column layout where the left side sticks while the right side scrolls.
 
-`react-sticky` works by calculating the position of a `<Sticky>` component relative to a `<StickyContainer>` component. If it would be outside the viewport, the styles required to affix it to the top of the screen are passed as an argument to a render callback, a function passed as a child.
+`sticky-component` works by calculating the position of a `<Sticky>` component relative to a `<StickyContainer>` component. If it would be outside the viewport, the styles required to affix it to the top of the screen are passed as an argument to a render callback, a function passed as a child.
 
 ```js
 <StickyContainer>
@@ -65,7 +50,7 @@ app.js
 
 ```js
 import React from 'react';
-import { StickyContainer, Sticky } from 'react-sticky';
+import { StickyContainer, Sticky } from 'sticky-component';
 // ...
 
 class App extends React.Component {
@@ -189,4 +174,4 @@ app.js
 ## FAQ
 
 ### I get errors while using React.Fragments
-React.Fragments does not correspond to an actual DOM node, so `react-sticky` can not calculate its position. Because of this, React.Fragments is not supported.
+React.Fragments does not correspond to an actual DOM node, so `sticky-component` can not calculate its position. Because of this, React.Fragments is not supported.
